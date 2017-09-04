@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | 当当当的博客</title>
+  <title>cocopods 安装 | 当当当的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="当当当的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="因为更换了新电脑，因此需要重新搭建开发环境，重新安装cocoapods。 安装中发现以前的方法不可用了， 淘宝的镜像源似乎不可用了。目前我采用的是 ruby china 的源。 安装步骤：  先更新ruby的gem命令  $ sudo gem update –system  打开终端， 使用一下命令查看镜像源：  $ gem sources -l  删除官方的ruby源  $ gem source">
+<meta name="keywords" content="iOS cocoapods">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cocopods 安装">
+<meta property="og:url" content="http://yoursite.com/2017/09/04/cocopods-安装/index.html">
 <meta property="og:site_name" content="当当当的博客">
+<meta property="og:description" content="因为更换了新电脑，因此需要重新搭建开发环境，重新安装cocoapods。 安装中发现以前的方法不可用了， 淘宝的镜像源似乎不可用了。目前我采用的是 ruby china 的源。 安装步骤：  先更新ruby的gem命令  $ sudo gem update –system  打开终端， 使用一下命令查看镜像源：  $ gem sources -l  删除官方的ruby源  $ gem source">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-04T08:55:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="当当当的博客">
+<meta name="twitter:title" content="cocopods 安装">
+<meta name="twitter:description" content="因为更换了新电脑，因此需要重新搭建开发环境，重新安装cocoapods。 安装中发现以前的方法不可用了， 淘宝的镜像源似乎不可用了。目前我采用的是 ruby china 的源。 安装步骤：  先更新ruby的gem命令  $ sudo gem update –system  打开终端， 使用一下命令查看镜像源：  $ gem sources -l  删除官方的ruby源  $ gem source">
   
     <link rel="alternative" href="/atom.xml" title="当当当的博客" type="application/atom+xml">
   
@@ -150,36 +155,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-cocopods-安装" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/04/cocopods-安装/" class="archive-article-date">
-  	<time datetime="2017-09-04T08:54:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/04/cocopods-安装/">cocopods 安装</a>
+    <h1 class="article-title" itemprop="name">
+      cocopods 安装
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/09/04/cocopods-安装/" class="archive-article-date">
+  	<time datetime="2017-09-04T08:54:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因为更换了新电脑，因此需要重新搭建开发环境，重新安装cocoapods。 安装中发现以前的方法不可用了， 淘宝的镜像源似乎不可用了。目前我采用的是 <a href="https://gems.ruby-china.org/" target="_blank" rel="external">ruby china</a> 的源。</p>
+<p>安装步骤：</p>
+<ol>
+<li>先更新ruby的gem命令</li>
+</ol>
+<p>$ sudo gem update –system</p>
+<ol>
+<li>打开终端， 使用一下命令查看镜像源：</li>
+</ol>
+<p>$ gem sources -l</p>
+<ol>
+<li>删除官方的ruby源</li>
+</ol>
+<p>$ gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a> </p>
+<ol>
+<li>替换新的ruby源（以前是用淘宝，目前淘宝似乎用不了了）采用ruby china 的源。</li>
+</ol>
+<p>$ gem sources –a <a href="https://gems.ruby-china.org/" target="_blank" rel="external">https://gems.ruby-china.org/</a> </p>
+<p>5.添加完成之后可重复步骤1进行验证（$ gem sources -l）如果是下图所示就没问题了。</p>
+<p>6.安装cocoapods（可能需要一会）</p>
+<p>$ sudo gem install cocoapods</p>
+<p>7.最后在执行如下命令安装：</p>
+<p>$ pod setup</p>
+<p>在这一步可能会耗时比较长，出现Setting up CocoaPods master repo，此时正在下载安装包。可能会一直卡在这里。 这个时候可以重新打开一个终端窗口， 在终端中执行命令： cd  ~/.cocoapods  进入目录中， 在执行命令：du -sh * 查看文件大小，每个一段时间查看一下， 看看文件大小是否正在增加。如果是说明正在下载当中。否则的话需检查网络或更换镜像源重新安装。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,57 +239,104 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/09/04/cocopods-安装/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/04/myblog/" class="archive-article-date">
-  	<time datetime="2017-09-04T07:11:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/04/myblog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS GCD死锁问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/04/myblog/">iOS GCD死锁问题</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">iOS GCD</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -264,8 +359,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

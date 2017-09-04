@@ -152,6 +152,103 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-cocopods-安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/04/cocopods-安装/">cocopods 安装</a>
+    </h1>
+  
+
+        
+        <a href="/2017/09/04/cocopods-安装/" class="archive-article-date">
+  	<time datetime="2017-09-04T08:54:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因为更换了新电脑，因此需要重新搭建开发环境，重新安装cocoapods。 安装中发现以前的方法不可用了， 淘宝的镜像源似乎不可用了。目前我采用的是 <a href="https://gems.ruby-china.org/" target="_blank" rel="external">ruby china</a> 的源。</p>
+<p>安装步骤：</p>
+<ol>
+<li>先更新ruby的gem命令</li>
+</ol>
+<p>$ sudo gem update –system</p>
+<ol>
+<li>打开终端， 使用一下命令查看镜像源：</li>
+</ol>
+<p>$ gem sources -l</p>
+<ol>
+<li>删除官方的ruby源</li>
+</ol>
+<p>$ gem sources –remove <a href="https://rubygems.org/" target="_blank" rel="external">https://rubygems.org/</a> </p>
+<ol>
+<li>替换新的ruby源（以前是用淘宝，目前淘宝似乎用不了了）采用ruby china 的源。</li>
+</ol>
+<p>$ gem sources –a <a href="https://gems.ruby-china.org/" target="_blank" rel="external">https://gems.ruby-china.org/</a> </p>
+<p>5.添加完成之后可重复步骤1进行验证（$ gem sources -l）如果是下图所示就没问题了。</p>
+<p>6.安装cocoapods（可能需要一会）</p>
+<p>$ sudo gem install cocoapods</p>
+<p>7.最后在执行如下命令安装：</p>
+<p>$ pod setup</p>
+<p>在这一步可能会耗时比较长，出现Setting up CocoaPods master repo，此时正在下载安装包。可能会一直卡在这里。 这个时候可以重新打开一个终端窗口， 在终端中执行命令： cd  ~/.cocoapods  进入目录中， 在执行命令：du -sh * 查看文件大小，每个一段时间查看一下， 看看文件大小是否正在增加。如果是说明正在下载当中。否则的话需检查网络或更换镜像源重新安装。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS cocoapods</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/04/cocopods-安装/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-myblog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -385,6 +482,10 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS cocoapods</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">iOS GCD</a>
