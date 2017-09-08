@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="当当当的博客">
 <meta property="og:description" content="Queue (队列): 分为串行和并行, 串行队列按顺序开始执行,  执行完上一个才能执行下一个. 并行队列(开始也是按添加顺序执行,不需要等其他的完成) 允许同时执行多个任务, 完成的顺序是随机的  Async和Sync (异步执行和同步执行): 使用dispathc_async调用一个block, 这个block会被放到队尾执行,  至于block是串行执行还是并行执行只和dispatch_a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-04T07:23:53.000Z">
+<meta property="og:updated_time" content="2017-09-08T07:28:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS GCD死锁问题">
 <meta name="twitter:description" content="Queue (队列): 分为串行和并行, 串行队列按顺序开始执行,  执行完上一个才能执行下一个. 并行队列(开始也是按添加顺序执行,不需要等其他的完成) 允许同时执行多个任务, 完成的顺序是随机的  Async和Sync (异步执行和同步执行): 使用dispathc_async调用一个block, 这个block会被放到队尾执行,  至于block是串行执行还是并行执行只和dispatch_a">
@@ -63,6 +63,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+				<li><a href="/tags/转载/">转载</a></li>
 	        
 			</ul>
 		</nav>
@@ -120,6 +122,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -137,12 +141,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/转载/">转载</a></li>
 		        
 				</ul>
 			</nav>
@@ -474,6 +480,18 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">OC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">转载</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
